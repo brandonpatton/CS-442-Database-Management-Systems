@@ -1,0 +1,195 @@
+
+
+
+
+
+
+
+SITE: http://www.sqlcourse.com/   <----------------------------------answers and questions to below
+
+
+
+
+SELECTING DATA EXERCISES:
+
+	1. select first, age from empinfo;   			(Q1: Display the first name and age for everyone that's in the table.)
+								
+	2. select first, last, city from empinfo		(Q2: Display the first name, last name, and city for everyone that's not from Payson.)
+		where city <> 'Payson';
+
+	3. select * from empinfo				(Q3: Display all columns for everyone that is over 40 years old.)
+		where age > 40;
+
+	4. select first, last from empinfo			(Q4: Display the first and last names for everyone whose last name ends in an "ay".)
+		where last LIKE '%ay';
+
+	5. select * from empinfo				(Q5: Display all columns for everyone whose first name equals "Mary".)
+		where first = 'Mary';
+
+	6. select * from empinfo				(Q6: Display all columns for everyone whose first name contains "Mary".)
+		where first LIKE '%Mary%';
+						SCORE: 6/6
+
+CREATING TABLE EXERCISE:
+
+	1. create table myemployees_bp2501			(Q1: You have just started a new company. It is time to hire some employees. 						
+	   (firstname varchar(30),				     You will need to create a table that will contain the following information about your new employees: 
+	    lastname varchar(30),				     firstname, lastname, title, age, and salary.)
+	    title varchar(30),
+	    age number(2),			//had 3 instead of 2 for age digit limit, changed to 2 bc more realistic
+	    salary number(6, 2));
+						SCORE: 1/1
+
+INSERTING INTO A TABLE EXERCISE:
+
+	Exercise 1:
+	   insert into myemployees_bp2501					
+		(firstname, lastname, title, age, salary)
+		values ('Jonie', 'Weber', 'Secretary', 28, 19500.00);
+
+	   insert into myemployees_bp2501
+		(firstname, lastname, title, age, salary)
+		values ('Potsy', 'Weber', 'Programmer', 32, 45300.00);
+
+	   insert into my employees_bp2501
+		(firstname, lastname, title, age, salary)
+		values ('Dirk', 'Smith', 'Programmer II', 45, 75020.00);
+
+	   insert into my_employees_bp2501
+		(firstname, lastname, title, age, salary)
+		values ('Ian', 'Baker', 'Programmer III', 20, 69696.00);
+	
+	   insert into my_employees_bp2501
+		(firstname, lastname, title, age, salary)
+		values ('Brandon', 'Patton', 'Janitor', 20, 1.00);
+
+	   insert into my_employees_bp2501
+		(firstname, lastname, title, age, salary)
+		values ('Alex', 'Loucas', 'Researcher', 20, 70000.00);
+
+	   insert into my_employees_bp2501
+		(firstname, lastname, title, age, salary)
+		values ('Luke', 'Anthony', 'Philosopher', 20, 66666.00);
+
+	   insert into my_employees_bp2501
+		(firstname, lastname, title, age, salary)
+		values ('Nick', 'Marina', 'Researcher', 20, 12345.00);
+
+	Exercise 2: 
+		1. select * from my_employeesbp2501;
+		
+		2. select * from my_employeesbp2501
+			where salary > 30000;
+
+		3. select firstname, lastname from my_employees2501
+			where age < 30;	
+
+		4. select firstname, lastname, salary from my_employees2501
+			where title LIKE '%Programmer%';
+
+		5. select * from my_employeesbp2501
+			where lastname LIKE '%ebe%';
+
+		6. select firstname from my_employees2501
+			where firstname = 'Potsy';
+
+		7. select * from my_employees2501
+			where age > 80;
+	
+		8. select * from my_emmployees2501
+			where lastname LIKE '%ith';
+
+						
+						SCORE: 2/2
+
+UPDATING RECORDS EXERCISES:
+
+	1. update my_employees2501
+		set lastname = 'Weber-Williams'
+		where firstname = 'Jonie' and lastname = 'Weber';
+
+	2. update my_employees2501
+		set age = age + 1
+		where lastname = 'Smith';			//answers had firstname in where clause as well, if needed that would provide increased identification
+
+	3. update my_employees2501
+		set title = 'Administrative Assistant'
+		where title = 'Secretary';
+
+	4. update my_employees2501
+		set salary = salary + 3500			// 4,5 remember to use = in this scenario rather than "salary + #" which is just wrong
+		where salary < 30000;
+
+	5. update my_employees2501
+		set salary = salary + 4500 			// you're reassigning variables, it makes sense that you would have to use = 
+		where salary > 33500;
+
+	6. update my_employees2501
+		set title = 'Programmer III'
+		where title = 'Programmer II';
+
+	7. update my_employees2501	
+		set title = 'Programmer II'
+		where title = 'Programmer';
+
+						SCORE: 7/7, make sure to be REASSIGNING variables, dont just add to/do operations on them unless in the where clause
+
+
+DELETING RECORDS EXERCISES:
+
+		delete from my_employees;  	//This causes all records to be deleted
+
+	1. delete from my_employees2501
+		where firstname = 'Jonie';      //answers had 'Weber-Williams' instead of 'Jonie' but earlier did not have me enter her last name as W-W ?????
+	
+	2. delete from my_employees2501
+		where salary > 70000;
+
+						SCORE: 2/2
+
+
+DROP A TABLE EXERCISE:
+
+	1. drop table myemployees2501;    //delete table and all rows (same function as delete from my_employees2501?)
+
+						SCORE: 1/1 tho there really was no question
+
+
+    -------------------------------------------------------------------- SQL COURSE 2 ------------------------------------------------------------------------------------
+
+SITE: http://www.sqlcourse2.com/
+
+
+ADVANCED FEATURES OF SQL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
